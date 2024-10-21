@@ -10,8 +10,15 @@
 
 <body>
     <h1>Single post view</h1>
-    <p>Title: {{ $post->title }}</p>
-    <p>Content: {{ $post->content }}</p>
+    <li>
+        Title: {{ $post->title }}
+        <br>
+        Content: {{ $post->content }}
+        <br>
+        <br>
+    </li>
+    
+    <br>
 
     <a href="/posts">Back To All Posts</a>
 
