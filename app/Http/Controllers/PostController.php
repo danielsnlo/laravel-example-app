@@ -7,17 +7,36 @@ use App\Models\Post;
 
 class PostController extends Controller
 {
-    public function index(){
+    public function index() {
 
         $posts = Post::all();
         return view('posts.index', ['allPosts' => $posts]);
         //return "<h1>All posts</h1>";
     }
 
-    public function show($id){
+    public function show($id) {
 
        // \Log::debug($id);
        $post = Post::find($id);
        return view('posts.show', ['post' => $post]);
+    }
+
+    public function create() {
+
+        $post = Post::all();
+        return view('posts.create');
+    }
+
+    public function store(Request $request) {
+
+        // \Log::debug($request);
+        $data = [
+            'title' => $request->title,
+            'content' => $request->content
+        ];
+
+        $post = Post::create($data);
+
+        return redirect('/posts');;
     }
 }
