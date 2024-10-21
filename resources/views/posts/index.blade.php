@@ -10,15 +10,20 @@
 
 <body>
     <h1>All posts</h1>
+
+    <a href="/posts/create">Forums</a>
+    
     <ul>
         @foreach ($allPosts as $post)
             <li>
                 Title: {{ $post->title }} <br>
                 Content: {{ $post->content }} <br>
                 <a href="/posts/{{ $post->id }}">Show</a>
-            </li>
+            </li> <br>
         @endforeach
     </ul>
+    
+
 </body>
 
 </html>
