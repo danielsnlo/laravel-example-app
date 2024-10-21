@@ -6,11 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-
-
     <h1>Create post</h1>
-
-
     <form action="/posts" method="post">
         @csrf
         <label for="title">Title:</label>
@@ -28,12 +24,8 @@
         <input type="submit" value="CREATE">
     </form>
 
-
     <br>
 
-
     <a href="/posts">Back to all posts</a>
-
-
 </body>
 </html>
